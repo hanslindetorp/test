@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Template</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" href="#">
+	</head>
+
+
+	<body>
+
+		<main class="max-size">
+
+			<section id="start" class="dark">
+				<h1 class="stremsy">STREMSY</h1>
+				<p class="h-center imusic-loading">Loading...</p>
+				<button data-waxml-click-continue="music">PLAY</button>
+				<button data-waxml-click-pause="music">STOP</button>
+
+				<input 
+					type="range" 
+					class="position-pointer" 
+					min="0" max="1" 
+					step="0.001" 
+					value="0"
+					data-waxml-change-set="$relPos=this.value" />
+				<span id="relPos">0:00:00</span>
+
+				<!-- <audio id="stem1" src="#file1URL" controls></audio>
+				<audio id="stem1" src="#file2URL" controls></audio>
+				<audio id="stem1" src="#file3URL" controls></audio>
+				<audio id="stem1" src="#file4URL" controls></audio>
+
+				<input type="text" id="file1URL" />
+				<input type="text" id="file2URL" />
+				<input type="text" id="file3URL" />
+				<input type="text" id="file4URL" /> -->
+
+			
+				  <div class="range">
+					<div class="range-slider">
+					  
+						<!-- <input
+						type="range"
+						min="0"
+						max="100"
+						value="0"
+						class="range-input"
+						id="range4"
+						step="1"
+						data-waxml-input-set="ch1_volume=this.value" 
+					   /> -->
+					  <div class="sliderticks">
+					  </div>
+					</div>
+				  </div>   
+				</div>
+			  </div>
+
+				<input id="mySlider1" type="range" min="-24" max="12" value="0" data-waxml-input-set="ch1_volume=this.value" >
+				<div class="value1">0dB</div></input>
+				<input id="mySlider2" type="range" min="-24" max="12" value="0" data-waxml-input-set="ch2_volume=this.value" >
+				<div class="value2">0dB</div></input>
+				<input id="mySlider3" type="range" min="-24" max="12" value="0" data-waxml-input-set="ch3_volume=this.value" >
+				<div class="value3">0dB</div></input>
+				<input id="mySlider4" type="range" min="-24" max="12" value="0" data-waxml-input-set="ch4_volume=this.value" >
+				<div class="value4">0dB</div></input>
+
+			  <!-- Peaking1 sliders ch1-->
+				<input id="mySlider5" class="filterSlider" type="range" min="100" max="2000" value="400" data-waxml-input-set="ch1_peaking1_f=this.value" />
+				<input id="mySlider6" class="filterSlider" type="range" min="5" max="30" value="10" data-waxml-input-set="ch1_peaking1_q=this.value" />
+				<input id="mySlider7" class="filterSlider" type="range" min="-20" max="20" value="0" data-waxml-input-set="ch1_peaking1_g=this.value" />
+
+				<input id="mySlider8" class="filterSlider" type="range" min="100" max="2000" value="400" data-waxml-input-set="ch2_peaking1_f=this.value" />
+				<input id="mySlider9" class="filterSlider" type="range" min="5" max="30" value="10" data-waxml-input-set="ch2_peaking1_q=this.value" />
+				<input id="mySlider10" class="filterSlider" type="range" min="-20" max="20" value="0" data-waxml-input-set="ch2_peaking1_g=this.value" />
+
+				<input id="mySlider11" class="filterSlider" type="range" min="100" max="2000" value="400" data-waxml-input-set="ch3_peaking1_f=this.value" />
+				<input id="mySlider12" class="filterSlider" type="range" min="5" max="30" value="10" data-waxml-input-set="ch3_peaking1_q=this.value" />
+				<input id="mySlider13" class="filterSlider"  type="range" min="-20" max="20" value="0" data-waxml-input-set="ch3_peaking1_g=this.value" />
+
+				<input id="mySlider14" class="filterSlider" type="range" min="100" max="2000" value="400" data-waxml-input-set="ch4_peaking1_f=this.value" />
+				<input id="mySlider15" class="filterSlider" type="range" min="5" max="30" value="10" data-waxml-input-set="ch4_peaking1_q=this.value" />
+				<input id="mySlider16" class="filterSlider" type="range" min="-20" max="20" value="0" data-waxml-input-set="ch4_peaking1_g=this.value" />
+			</section>
+
+
+		</main>
+		<script src="plugins/max.size.js"></script>
+		<script src="plugins/WebAudioXML.js" data-source="audio.xml"></script>
+		<script src="plugins/script.js"></script>
+		<script src="plugins/stremsy.js"></script>
+
+		
+
+	</body>
+</html>

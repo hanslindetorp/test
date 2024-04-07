@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio 
+
+    xmlns="https://www.w3schools.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.w3schools.com https://momdev.se/lindetorp/waxml/scheme_1.16.xsd"
+
+    version="1.0" 
+    timeUnit="ms" 
+    gain="0dB"
+    controls="true">
+
+
+    <var name="mix_intensity" default="0" mapin="0,1" />
+    <var name="mix_blend" default="0"/>
+    <var name="mix_transition_time" default="10" />
+
+    <var name="relPos" default="0" mapin="0,1"/>
+
+    <AudioBufferSourceNode id="stem1" relOffset="$relPos" class="music" src="glitch-assets/stem1.wav" output="#ch1" />
+    <AudioBufferSourceNode id="stem2" relOffset="$relPos" class="music" src="glitch-assets/stem2.wav" output="#ch2" />
+    <AudioBufferSourceNode id="stem3" relOffset="$relPos" class="music" src="glitch-assets/stem3.wav" output="#ch3" />
+    <AudioBufferSourceNode id="stem4" relOffset="$relPos" class="music" src="glitch-assets/stem4.wav" output="#ch4" />
+    <!-- <AudioBufferSourceNode id="stem3" class="music" src="" />
+    <AudioBufferSourceNode id="stem4" class="music" src="" /> -->
+  
+  
+
+    <include id="stereo-mixer-4ch" href="plugins/mixer.xml" transitionTime="$mix_transition_time" />
+
+
+
+</Audio>
